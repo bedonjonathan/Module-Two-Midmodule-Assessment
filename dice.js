@@ -1,10 +1,10 @@
 
-const diceFaces = ["&#9856", "&#9857", "&#9858", "&#9859 ", "&#9860", "&#9861"];
+const diceFaces = ["&#9856", "&#9857", "&#9858", "&#9859", "&#9860", "&#9861"];
 const form = document.querySelector("form");
 const numOfDice = document.querySelector("#num-of-dice");
 const rollButton = document.querySelector("#rollButton");
 let diceResult = document.querySelector("#dice-para");
-let sumText = document.querySelector("#sum");
+let sumText = document.querySelector("#sum-para");
 const originalSumtext = sumText.textContent;
 let ul = document.querySelector("#history-list");
 let dice;
