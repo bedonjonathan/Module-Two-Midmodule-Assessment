@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling</title>
+    <script src="./diceRoll.js" defer></script>
+    <link rel="stylesheet" href="./diceRoll.css">
+</head>
+<body>
+    <main>
+        <form action="" class="dice-roll">
+            Number of dice: <input type="number" name="dice-number" id="number-of-dice" min=0 max =50>
+            <button id="roll-btn" type="submit">Roll the dice!</button>
+        </form>
+        <section id="view-dice-roll">
+            <p id="dice-para"></p>
+            <p id="sum-para">Sum = </p>
+        </section>
+        <section id="dice-history">
+        </section>
+    </main>
+</body>
+</html>
