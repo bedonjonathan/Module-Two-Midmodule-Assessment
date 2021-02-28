@@ -16,18 +16,91 @@ const dice = [
 
 let rollInput = document.querySelector("#number-of-dice");
 const rollResult = document.querySelector("#dice-para");
-
 const diceRoll = document.querySelector("#roll-btn");
+const ul = document.querySelector("#history-list");
+const sumStatus = document.querySelector("#sum-para")
+const dieSumArray = [];
 
 let sum = 0;
-diceRoll.addEventListener("click", (event) => {
-  event.preventDefault();
-  let diceThrow = [];
-  let num = Number(rollInput.value);
-  for (let i = 0; i < num; i++) {
-    let roll = Math.floor(Math.random() * dice.length);
-    diceThrow.push(dice[roll].icon);
-    sum += dice[roll].value;
-  }
-  rollResult.textContent = diceThrow.join("");
-});
+let rollCount = 0;
+const rollingDice = (event) => {
+    event.preventDefault();
+    sumStatus.textContent = "Sum: "
+    let diceThrow = [];
+    let num = Number(rollInput.value);
+    for (let i = 0; i < num; i++) {
+        let roll = Math.floor(Math.random() * dice.length);
+        diceThrow.push(dice[roll].icon);
+        sum += dice[roll].value;
+    }
+    rollResult.textContent = diceThrow.join("");
+    sumStatus.textContent += sum;
+    
+    dieSumArray.push(`${rollResult.textContent}: ${sumStatus.textContent}`);
+    console.log(dieSumArray);
+    
+    if (rollCount > 0) {
+        const sumHistory = document.createElement("li");
+        ul.appendChild(sumHistory);
+        sumHistory.textContent = `${dieSumArray[rollCount-1]}`;
+    }
+    rollCount++
+
+
+
+
+
+
+
+
+
+
+//     if (rollCount > 0) {
+
+
+// } else {
+
+// }
+
+//     for (let i = 0; i < num; i++) {
+//         let roll = Math.floor(Math.random() * dice.length);
+//         diceThrow.push(dice[roll].icon);
+//         sum += dice[roll].value;
+//     }
+//     rollResult.textContent = diceThrow.join("");  
+
+// while (rollCount === 0) {
+
+// }sumStatus.includes **numbers 0-9**) {
+//     } else {
+       
+       
+//         sum = 0
+//         rollCount = 0        
+            
+        
+//         rollResult.textContent = sum;
+//         rollCount++
+//     }
+}
+
+
+// const history = (event) => {
+//     event.preventDefault();
+//     if (rollCount === 0) {
+
+//     } let diceThrow = [];
+//     let num = Number(rollInput.value);
+//     for (let i = 0; i < num; i++) {
+//       let roll = Math.floor(Math.random() * dice.length);
+//       diceThrow.push(dice[roll].icon);
+//       sum += dice[roll].value;
+//     }
+//     rollResult.textContent = diceThrow.join("");  
+// }
+
+
+// diceRoll.addEventListener("click", history)
+
+diceRoll.addEventListener("click", rollingDice) 
+
