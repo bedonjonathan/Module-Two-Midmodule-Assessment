@@ -1,0 +1,42 @@
+#view-dice-roll,
+#dice-history {
+  display: flex;
+  display: block;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  margin: 5px;
+  height: fit-content;
+}
+
+.dice-roll,
+#roll-btn {
+  display: block;
+  font-size: 15px;
+  padding: 1px;
+}
+
+#roll-btn {
+  display: block;
+  font-size: 12px;
+  padding: 1px;
+}
+
+#number-of-dice {
+  width: 75px;
+}
+
+#dice-para {
+  font-size: 44px;
+  font-weight: bold;
+}
+
+#dice-history {
+  font-size: 32px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+#history-list > li {
+  font-size: 17px;
+  font-weight: normal;
+}

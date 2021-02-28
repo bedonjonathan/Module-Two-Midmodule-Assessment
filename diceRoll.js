@@ -36,8 +36,7 @@ const rollingDice = (event) => {
     rollResult.textContent = diceThrow.join("");
     sumStatus.textContent += sum;
     
-    dieSumArray.push(`${rollResult.textContent}: ${sumStatus.textContent}`);
-    console.log(dieSumArray);
+    dieSumArray.push(`${rollResult.textContent} = ${sum}`);
     
     if (rollCount > 0) {
         const sumHistory = document.createElement("li");
@@ -45,62 +44,9 @@ const rollingDice = (event) => {
         sumHistory.textContent = `${dieSumArray[rollCount-1]}`;
     }
     rollCount++
-
-
-
-
-
-
-
-
-
-
-//     if (rollCount > 0) {
-
-
-// } else {
-
-// }
-
-//     for (let i = 0; i < num; i++) {
-//         let roll = Math.floor(Math.random() * dice.length);
-//         diceThrow.push(dice[roll].icon);
-//         sum += dice[roll].value;
-//     }
-//     rollResult.textContent = diceThrow.join("");  
-
-// while (rollCount === 0) {
-
-// }sumStatus.includes **numbers 0-9**) {
-//     } else {
-       
-       
-//         sum = 0
-//         rollCount = 0        
-            
-        
-//         rollResult.textContent = sum;
-//         rollCount++
-//     }
+    sum = 0
 }
 
-
-// const history = (event) => {
-//     event.preventDefault();
-//     if (rollCount === 0) {
-
-//     } let diceThrow = [];
-//     let num = Number(rollInput.value);
-//     for (let i = 0; i < num; i++) {
-//       let roll = Math.floor(Math.random() * dice.length);
-//       diceThrow.push(dice[roll].icon);
-//       sum += dice[roll].value;
-//     }
-//     rollResult.textContent = diceThrow.join("");  
-// }
-
-
-// diceRoll.addEventListener("click", history)
 
 diceRoll.addEventListener("click", rollingDice) 
 

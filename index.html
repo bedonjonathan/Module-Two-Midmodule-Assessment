@@ -11,7 +11,7 @@
 <body>
     <main>
         <form action="" class="dice-roll">
-            Number of dice: <input type="number" name="dice-number" id="number-of-dice" min=0 max =50 required>
+            Number of dice: <input type="number" name="dice-number" id="number-of-dice" min=1 max =50 required/>
             <button id="roll-btn" type="submit">Roll the dice!</button>
         </form>
         <section id="view-dice-roll">
@@ -19,7 +19,8 @@
             <p id="sum-para">Sum = </p>
         </section>
         <section id="dice-history">
-            <ul id="history-list">History</ul>
+            <h5>History</h5>
+            <ul id="history-list"></ul>
         </section>
     </main>
 </body>
