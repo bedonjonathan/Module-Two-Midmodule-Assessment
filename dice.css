@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    ;
+}
+section {
+    border: navy 2px solid;
+    padding: 1%;
+    margin: 2.5%  ;
+}
+
+#results {
+    height: 200px;
+}
+
+#dice-result{
+    
+}
