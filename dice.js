@@ -20,10 +20,13 @@ form.button.addEventListener("click", (e) => {
   }
   diceResult.innerHTML = dice;
   sumText.textContent += sum;
-  button.addEventListener("click", (e) => {
-    let li = document.createElement("li");
-    li.innerHTML += dice;
-    li.innerText += ` = ${sum}`;
+  let li = ""
+  li = document.createElement("li");
+  li.innerHTML += dice;
+  li.innerText += ` = ${sum}`;
+  button.addEventListener("click", (e) => { 
     ul.appendChild(li);
-  });
+
+  },);
+ 
 });
