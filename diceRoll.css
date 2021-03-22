@@ -1,11 +1,69 @@
+body {
+  /* background-color: #8bbbae; */
+  /* font: #220721; */
+  /* background-color: #220721; */
+  background-color: #f4f2d6;
+  color: #220721;
+  background: linear-gradient(115deg, #f75146, #32989a,  #98b7a8, #171121);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+h1 {
+  background-color: #f75146;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  width: fit-content;
+  font-family: jubilat, serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #220721;
+  font-size: 22px;
+}
+
+p, li, h5 {
+  color: #220721;
+  font-family: jubilat, serif;
+  /* font-weight: 600;
+  font-style: italic; */
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#number-of-dice {
+  background-color: 239, 239, 239;
+  font-family: jubilat, serif;
+  font-weight: 500;
+}
+
 #view-dice-roll,
 #dice-history {
+  background-color: #8bbbae;
   display: flex;
   display: block;
   flex-wrap: wrap;
-  border: 2px solid black;
+  border: 2px solid #8bbbae;
   margin: 5px;
   height: fit-content;
+}
+
+#view-dice-roll{
+  height: 140px;
+  padding-left: 10px;
+  padding-right: 50px;
+  border-radius: 5px;
+  border: .25px solid #220721
 }
 
 .dice-roll,
@@ -15,28 +73,49 @@
   padding: 1px;
 }
 
+#dice-label {
+  font-size: 18px;
+  /* background-color: #220721; */
+  color:#220721;
+  text-shadow: 1px 1px 2px #f75146, 0 1px 25px #2d213f, 1px 0 5px #8bbbae"
+}
+
 #roll-btn {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
+  margin-top: 7px;
+  margin-left: 121px;
   padding: 1px;
+  font-family: omnes-narrow, sans-serif;
+  font-weight: 600;
+  color: #220721;
+  border-radius: 2px;
 }
 
 #number-of-dice {
-  width: 75px;
+  width: 73px;
+  font-size: 14px;
+  border: .75px solid #220721;
+  border-radius: 2px;
 }
 
 #dice-para {
   font-size: 44px;
   font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #dice-history {
   font-size: 32px;
   font-weight: bold;
   padding-left: 10px;
+  padding-right: 50px;
+  border-radius: 5px;
+  border: .25px solid #220721
 }
 
 #history-list > li {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: normal;
 }

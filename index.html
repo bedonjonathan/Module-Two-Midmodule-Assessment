@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Rolling</title>
     <script src="./diceRoll.js" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ftm0zui.css" />
     <link rel="stylesheet" href="./diceRoll.css">
 </head>
 <body>
     <h1>Dice Roller</h1>
     <main>
         <form action="" class="dice-roll">
-            <label>
-                Number of dice: <input type="number" name="dice-number" id="number-of-dice" min=1 max =50 />
+            <label id="dice-label">
+                Number of dice: <input type="number" name="dice-number" id="number-of-dice" min=1 max =30 />
             </label> 
             <button id="roll-btn" type="submit">Roll the dice!</button>
         </form>
